@@ -10,17 +10,31 @@ Bem-vindo ao **Product Page app Ecommerce**! Este é um aplicativo React Native 
 - **Adicionar ao Carrinho**: Adicione itens ao seu carrinho de compras com um simples toque.
 - **Carrinho de Compras**: Visualize e gerencie os itens no seu carrinho.
 
+
+## Tela de Login 🔐
+
+ Acesse a conta usando o usuário `Brian` e a senha `1234`
+
+![Tela de Login](./assets/tela-login.png)
+
+## 👕 Tela de Produtos
+
+Filtre produtos usando a barra de pesquisa. Carregue mais produtos à medida que você rola para baixo na lista.
+
+![Tela de Produtos](./assets/tela-produtos.png)
+
 ## 🛒 Tela do Carrinho de Compras
 
 A tela do carrinho de compras exibe informações sobre os itens selecionados, valor total e opções para limpar o carrinho ou adicionar novos itens. 
 
-![Carrinho de Compras](./carrinho-de-compras.png)
+![Carrinho de Compras](./assets/carrinho-de-compras.png)
 
 ### Estrutura da Tela do Carrinho de Compras
 
 - **Valor Total**: Exibe o valor total dos itens no carrinho.
 - **Quantidade de Itens**: Mostra a quantidade total de itens.
 - **Botões**: Opções para limpar o carrinho ou adicionar um novo item
+
 
 ## 📱 Tecnologias Utilizadas
 
