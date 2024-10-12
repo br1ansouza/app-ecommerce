@@ -1,39 +1,35 @@
-/**
- * Exportar:
- * - user {email, nome, id, foto}
- * - login(username, password)
- * - logout()
- * 
- * Regras:
- * 1 - Criar o contexto OK
- * 2 - Criar o provider OK
- * 2.1 - Exportar as variáveis e as funcoes
- * 3 - Construir o hook personalizado (opcional) OK
- */
-
 import { createContext, useState, useContext } from "react";
 
-export const AuthContext = createContext()
+// contexto de autenticação
+export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
 
-    const [user, setUser] = useState(false)   
+    // estado para armazenar o usuário autenticado
+    const [user, setUser] = useState(null);   
 
-    function login(username, password) {   
-        const fakeUser = { username: username, nome: 'Yan', foto: 'https://'}
-        setUser(fakeUser)
+    // login com verificação correta de credenciais
+    function login(username, password) {
+        // checagem se o username e password estão corretos
+        if (username === 'Brian' && password === '1234') {
+            const fakeUser = { username: 'Brian', nome: 'Brian', foto: 'https://'}; // Usuário fake para simular dados
+            setUser(fakeUser);  // Atualiza o estado com os dados do usuário
+        } else {
+            alert('Usuário ou senha inválidos');
+        }
     }
 
     function logout() {
-        setUser(false)
+        setUser(null);  // Define o usuário como não autenticado
     }
 
     return (
+       
         <AuthContext.Provider value={{ user, login, logout }}>
             {children}
         </AuthContext.Provider>
-    )
+    );
 }
 
-// Hook personalizado para usar o contexto
+// Hook personalizado para acessar o contexto de autenticação
 export const useAuth = () => useContext(AuthContext);

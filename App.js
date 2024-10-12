@@ -62,7 +62,7 @@ const Navigation = () => {
             headerRight: () => <CartIconWithNavigation />,
             title: 'Produtos',
           }} />
-          <Drawer.Screen name="Cart" component={CartPage} />          
+          <Drawer.Screen name="Carrinho de Compras" component={CartPage} />          
         </Drawer.Navigator> : <Login />}
     </>
   )

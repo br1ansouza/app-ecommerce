@@ -72,9 +72,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#5b88a5',
   },
   searchInput: {
-    marginTop: 12,
+    marginTop: 8,
     height: 40,
-    backgroundColor: '#d4cdc5',
+    backgroundColor: '#f4f4f2',
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 8,

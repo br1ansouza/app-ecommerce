@@ -1,16 +1,16 @@
-import { useState } from "react"
-import { View, Button, StyleSheet, TextInput, Text } from "react-native"
-import { useAuth } from "../../context/AuthContext"
+import { useState } from "react";
+import { View, Button, StyleSheet, TextInput, Text, TouchableOpacity } from "react-native";
+import { useAuth } from "../../context/AuthContext";
 
 export const Login = () => {
+    const { login } = useAuth();
 
-    const { login } = useAuth()
-
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     function handleLogin() {
-        login(username, password)
+        // Chama a função login passando as credenciais
+        login(username, password);
     }
 
     return (
@@ -19,18 +19,22 @@ export const Login = () => {
                 style={styles.input}
                 placeholder="Username"
                 value={username}
-                onChangeText={setUsername} />
+                onChangeText={setUsername}
+            />
 
             <TextInput
                 style={styles.input}
                 placeholder="Password"
                 secureTextEntry
                 value={password}
-                onChangeText={setPassword} />
+                onChangeText={setPassword}
+            />
 
-            <Button title="Login" onPress={handleLogin} />
+            <TouchableOpacity style={styles.logoutButton} onPress={handleLogin}>
+                <Text style={styles.logoutText}>Login</Text>
+            </TouchableOpacity>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
@@ -50,5 +54,17 @@ const styles = StyleSheet.create({
         marginBottom: 12,
         paddingHorizontal: 10,
         backgroundColor: '#f4f4f2'
-    }
-})
+    },
+    logoutButton: {
+        backgroundColor: '#ffffff',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+        elevation: 3,
+    },
+    logoutText: {
+        color: '#5b88a5',
+        fontSize: 16,
+        fontWeight: 'bold',
+    },
+});
