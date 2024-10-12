@@ -14,7 +14,7 @@ Bem-vindo ao **Product Page app Ecommerce**! Este é um aplicativo React Native 
 
 A tela do carrinho de compras exibe informações sobre os itens selecionados, valor total e opções para limpar o carrinho ou adicionar novos itens. 
 
-![Tela do Carrinho de Compras](./README/carrinho-de-copmpras.png)
+![Carrinho de Compras](./carrinho-de-compras.png)
 
 ### Estrutura da Tela do Carrinho de Compras
 
